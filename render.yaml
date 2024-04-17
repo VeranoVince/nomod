@@ -1,0 +1,15 @@
+services:
+  - name: frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run dev
+
+  - name: backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+
+  - name: combined
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run dev && npm start
